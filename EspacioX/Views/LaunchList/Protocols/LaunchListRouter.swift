@@ -1,4 +1,6 @@
 
 import Foundation
 
-protocol LaunchListRouter: Router { }
+protocol LaunchListRouter: Router {
+    func routeToDetail(withId id: Int)
+}

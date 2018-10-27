@@ -29,4 +29,15 @@ final class LaunchListDefaultViewController: UIViewController, Navigatable {
 
 extension LaunchListDefaultViewController: LaunchListViewController {
     
+    func reloadView() {
+        
+    }
+    
+    func showLoader() {
+        
+    }
+    
+    func hideLoader() {
+        
+    }
 }

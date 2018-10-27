@@ -23,4 +23,8 @@ extension LaunchListDefaultPresenter: LaunchListPresenter {
         self.view = view
         router.attachView(view: view)
     }
+    
+    func viewDidLoad() {
+        
+    }
 }

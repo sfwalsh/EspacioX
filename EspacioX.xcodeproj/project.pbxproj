@@ -29,6 +29,8 @@
 		BFE560152184FD8F001B518B /* RouteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE560142184FD8F001B518B /* RouteType.swift */; };
 		BFE560172184FFA3001B518B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE560162184FFA3001B518B /* API.swift */; };
 		BFE5601A21850296001B518B /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5601921850296001B518B /* NetworkResult.swift */; };
+		BFE5601D2185067E001B518B /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5601C2185067E001B518B /* Launch.swift */; };
+		BFE5601F2185073E001B518B /* LaunchFetchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5601E2185073E001B518B /* LaunchFetchError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		BFE560142184FD8F001B518B /* RouteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteType.swift; sourceTree = "<group>"; };
 		BFE560162184FFA3001B518B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		BFE5601921850296001B518B /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		BFE5601C2185067E001B518B /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
+		BFE5601E2185073E001B518B /* LaunchFetchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchFetchError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,7 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				BFE560162184FFA3001B518B /* API.swift */,
+				BFE5601E2185073E001B518B /* LaunchFetchError.swift */,
 				BFE5601B21850299001B518B /* Protocols */,
+				BFE5601C2185067E001B518B /* Launch.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -334,6 +340,8 @@
 				BFE5600C2184FC90001B518B /* ReusableCell.swift in Sources */,
 				BFE560172184FFA3001B518B /* API.swift in Sources */,
 				BFE55FFB2184F8B5001B518B /* LaunchListPresenter.swift in Sources */,
+				BFE5601F2185073E001B518B /* LaunchFetchError.swift in Sources */,
+				BFE5601D2185067E001B518B /* Launch.swift in Sources */,
 				BFE5601A21850296001B518B /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
