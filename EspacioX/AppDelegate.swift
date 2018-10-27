@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        applyInitialViewController(forWindow: window)
         return true
     }
 
@@ -40,7 +42,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
+
+// MARK: Initial View Controller
+
+private extension AppDelegate {
+    
+    private func applyInitialViewController(forWindow window: UIWindow?) {
+        // Initial view could be switched out here based on login state, etc.
+        let viewController = LaunchListBuilder.build()
+        window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
+    }
+}
