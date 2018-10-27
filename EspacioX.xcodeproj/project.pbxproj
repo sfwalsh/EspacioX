@@ -27,6 +27,8 @@
 		BFE5600E2184FC92001B518B /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5600D2184FC92001B518B /* AlertPresentable.swift */; };
 		BFE560112184FCA3001B518B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE560102184FCA2001B518B /* Router.swift */; };
 		BFE560152184FD8F001B518B /* RouteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE560142184FD8F001B518B /* RouteType.swift */; };
+		BFE560172184FFA3001B518B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE560162184FFA3001B518B /* API.swift */; };
+		BFE5601A21850296001B518B /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5601921850296001B518B /* NetworkResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		BFE5600D2184FC92001B518B /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		BFE560102184FCA2001B518B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		BFE560142184FD8F001B518B /* RouteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteType.swift; sourceTree = "<group>"; };
+		BFE560162184FFA3001B518B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BFE5601921850296001B518B /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				BFE55FCE2184F0A8001B518B /* AppDelegate.swift */,
+				BFE560182184FFBB001B518B /* Models */,
 				BFE560132184FCBA001B518B /* Views */,
 				BFE55FF72184F766001B518B /* Utilities */,
 				BFE55FD52184F0A9001B518B /* Assets.xcassets */,
@@ -192,6 +197,23 @@
 				BFE560122184FCA9001B518B /* Protocols */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BFE560182184FFBB001B518B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BFE560162184FFA3001B518B /* API.swift */,
+				BFE5601B21850299001B518B /* Protocols */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BFE5601B21850299001B518B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BFE5601921850296001B518B /* NetworkResult.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,7 +332,9 @@
 				BFE55FEF2184F6E4001B518B /* LaunchListDefaultViewController.swift in Sources */,
 				BFE5600A2184FC8D001B518B /* DatasourceOperator.swift in Sources */,
 				BFE5600C2184FC90001B518B /* ReusableCell.swift in Sources */,
+				BFE560172184FFA3001B518B /* API.swift in Sources */,
 				BFE55FFB2184F8B5001B518B /* LaunchListPresenter.swift in Sources */,
+				BFE5601A21850296001B518B /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
