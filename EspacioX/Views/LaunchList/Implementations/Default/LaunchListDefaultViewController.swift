@@ -19,7 +19,7 @@ final class LaunchListDefaultViewController: UIViewController, Navigatable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        presenter.viewDidLoad()
     }
     
 }

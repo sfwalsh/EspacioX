@@ -11,7 +11,7 @@ enum API {
         case GET, PUT, UPDATE, DELETE
     }
     
-    private static let host: String = "https://api.spacexdata.com/v3"
+    private static let host: String = "api.spacexdata.com"
     
     private static func createRequest(withPath path: String, method: HTTPMethod) -> URLRequest? {
         
@@ -31,14 +31,14 @@ enum API {
     }
     
     static func buildUpcomingLaunchesRequest() -> URLRequest? {
-        return createRequest(withPath: "/launches/upcoming", method: .GET)
+        return createRequest(withPath: "/v3/launches/upcoming", method: .GET)
     }
     
     static func buildNextLaunchRequest() -> URLRequest? {
-        return createRequest(withPath: "/launches/next", method: .GET)
+        return createRequest(withPath: "/v3/launches/next", method: .GET)
     }
     
     static func buildLaunchDetailRequest(forId id: Int) -> URLRequest? {
-        return createRequest(withPath: "/launches/id", method: .GET)
+        return createRequest(withPath: "/v3/launches/id", method: .GET)
     }
 }

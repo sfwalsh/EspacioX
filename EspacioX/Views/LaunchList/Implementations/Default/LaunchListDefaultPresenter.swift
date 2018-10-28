@@ -25,6 +25,23 @@ extension LaunchListDefaultPresenter: LaunchListPresenter {
     }
     
     func viewDidLoad() {
-        
+        interactor.fetchUpcomingLaunches { [weak self] (result) in
+            switch result {
+            case .success(let launches):
+                break
+            case .failure(let error):
+                self?.handleError(error: error)
+            }
+        }
+    }
+}
+
+
+// MARK: Private functions
+
+extension LaunchListDefaultPresenter {
+    
+    private func handleError(error: Error) {
+        // FIXME: Implement this
     }
 }
