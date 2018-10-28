@@ -3,10 +3,25 @@ import UIKit
 
 final class LaunchListDefaultViewController: UIViewController, Navigatable {
     
+    private enum Layout {
+        static let countdownHeight: CGFloat = 180
+        static let launchInfoHeight: CGFloat = 63.0
+    }
+    
     internal let presenter: LaunchListPresenter
     
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
+        tableView.backgroundColor = .clear
+        tableView.separatorInset = .zero
+        tableView.separatorColor = Palette.iodineBlack
+        tableView.register(LaunchCountdownCell.self,
+                           forCellReuseIdentifier: LaunchCountdownCell.reuseIdentifier)
+        tableView.register(LaunchInfoCell.self,
+                           forCellReuseIdentifier: LaunchInfoCell.reuseIdentifier)
+        tableView.register(LaunchListSectionHeaderCell.self,
+                           forCellReuseIdentifier: LaunchListSectionHeaderCell.reuseIdentifier)
+        
         return tableView
     }()
     
@@ -32,6 +47,9 @@ final class LaunchListDefaultViewController: UIViewController, Navigatable {
         presenter.viewDidLoad()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 
@@ -44,17 +62,21 @@ extension LaunchListDefaultViewController: LaunchListViewController {
         setupConstraints()
     }
     
+    func setTitle(title: String) {
+        self.title = title
+    }
+    
     func reloadView() {
         refreshControl.endRefreshing()
         tableView.reloadData()
     }
     
     func showLoader() {
-        
+        // FIXME: Impl
     }
     
     func hideLoader() {
-        
+        // FIXME: Impl
     }
 }
 
@@ -64,6 +86,7 @@ extension LaunchListDefaultViewController: LaunchListViewController {
 extension LaunchListDefaultViewController {
     
     private func setupSubviews() {
+        view.backgroundColor = Palette.midnightBlue
         setupTableView()
         setupRefreshControl()
         view.addSubviewsForAutolayout(views: [
@@ -112,20 +135,37 @@ extension LaunchListDefaultViewController: UITableViewDataSource, UITableViewDel
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let item = presenter.item(atIndexPath: indexPath) else { return UITableViewCell() }
         switch item {
-        case .countdown(let launch):
-            break
-        case .listItem(let launch):
-            break
+        case .countdown(let launchViewModel):
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: LaunchCountdownCell.reuseIdentifier,
+                                                           for: indexPath) as? LaunchCountdownCell else {
+                                                            return UITableViewCell()
+            }
+            cell.setup(withViewModel: launchViewModel)
+            return cell
+        case .listItem(let launchViewModel):
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: LaunchInfoCell.reuseIdentifier,
+                                                           for: indexPath) as? LaunchInfoCell else {
+                                                            return UITableViewCell()
+            }
+            cell.setup(withViewModel: launchViewModel)
+            return cell
         }
-        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView,
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 45.0
+        guard let item = presenter.item(atIndexPath: indexPath) else { return 0 }
+        
+        switch item {
+        case .countdown:
+            return Layout.countdownHeight
+        case .listItem:
+            return Layout.launchInfoHeight
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         presenter.didSelectItem(atIndexPath: indexPath)
     }
 }

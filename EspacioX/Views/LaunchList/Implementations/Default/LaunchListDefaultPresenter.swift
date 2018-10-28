@@ -29,6 +29,7 @@ extension LaunchListDefaultPresenter: LaunchListPresenter {
     
     func viewDidLoad() {
         view?.performInitialSetup()
+        view?.setTitle(title: "EspacioX")
         fetchUpcomingLaunches()
         fetchNextLaunch()
     }

@@ -25,7 +25,7 @@ struct Launch: Decodable {
     let flightNumber: Int
     let missionName: String?
     let missionId: [String]
-    let launchDateUnixTimeStamp: Int
+    let launchDateUnixTimeStamp: Double
 
     // not exposed as we only want access to the reused value & name
     private let rocket: Rocket?
@@ -43,7 +43,7 @@ struct Launch: Decodable {
         flightNumber = try values.decode(Int.self, forKey: .flightNumber)
         missionName = try values.decodeIfPresent(String.self, forKey: .missionName)
         missionId = try values.decodeIfPresent([String].self, forKey: .missionId) ?? []
-        launchDateUnixTimeStamp = try values.decodeIfPresent(Int.self, forKey: .launchDateUnixTimeStamp) ?? 0
+        launchDateUnixTimeStamp = try values.decodeIfPresent(Double.self, forKey: .launchDateUnixTimeStamp) ?? 0
         rocket = try values.decodeIfPresent(Rocket.self, forKey: .rocket)
     }
 }

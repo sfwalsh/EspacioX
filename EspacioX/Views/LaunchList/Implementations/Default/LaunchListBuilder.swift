@@ -16,6 +16,17 @@ enum LaunchListBuilder {
         let view = LaunchListDefaultViewController(withPresenter: presenter)
         presenter.attachView(view: view)
         
-        return view
+        return buildNavigationController(forViewController: view)
+    }
+    
+    private static func buildNavigationController(forViewController viewController: UIViewController) -> UIViewController {
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.navigationBar.barTintColor = Palette.midnightBlue
+        navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController.navigationBar.tintColor = .white
+        navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.barStyle = .blackOpaque
+        
+        return navigationController
     }
 }
