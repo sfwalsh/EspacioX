@@ -52,7 +52,8 @@ private extension AppDelegate {
     private func applyInitialViewController(forWindow window: UIWindow?) {
         // Initial view could be switched out here based on login state, etc.
         let viewController = LaunchListBuilder.build()
-        window?.rootViewController = viewController
+        let rootNavigationController = UINavigationController(rootViewController: viewController)
+        window?.rootViewController = rootNavigationController
         window?.makeKeyAndVisible()
     }
 }
