@@ -38,6 +38,12 @@ final class LaunchListDefaultViewController: UIViewController, Navigatable {
         return refreshControl
     }()
     
+    private let activityIndicator: UIActivityIndicatorView = {
+        let activtyIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        activtyIndicator.hidesWhenStopped = true
+        return activtyIndicator
+    }()
+    
     init(withPresenter presenter: LaunchListPresenter) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -80,11 +86,11 @@ extension LaunchListDefaultViewController: LaunchListViewController {
     }
     
     func showLoader() {
-        // FIXME: Impl
+        activityIndicator.startAnimating()
     }
     
     func hideLoader() {
-        // FIXME: Impl
+        activityIndicator.stopAnimating()
     }
 }
 
@@ -99,7 +105,8 @@ extension LaunchListDefaultViewController {
         setupRefreshControl()
         view.addSubviewsForAutolayout(views: [
             backgroundGradientView,
-            tableView
+            tableView,
+            activityIndicator
             ])
     }
     
@@ -128,8 +135,10 @@ extension LaunchListDefaultViewController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
             ])
     }
 }

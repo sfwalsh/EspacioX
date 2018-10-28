@@ -10,8 +10,6 @@ final class LaunchListSectionHeaderCell: UITableViewHeaderFooterView, ReusableCe
         static let insets: UIEdgeInsets = UIEdgeInsets(top: 2, left: 12, bottom: 2, right: 12)
     }
     
-    // FIXME: Strings
-    
     private let rootStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -25,7 +23,7 @@ final class LaunchListSectionHeaderCell: UITableViewHeaderFooterView, ReusableCe
     private let dateTitleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.text = "Date"
+        label.text = NSLocalizedString("SECTION_HEADER_DATE", comment: "")
         label.font = FontMachine.boldAnnotation
         label.textColor = .white
         label.textAlignment = .left
@@ -36,7 +34,7 @@ final class LaunchListSectionHeaderCell: UITableViewHeaderFooterView, ReusableCe
     private let missionIdRocketTitleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.text = "Mission ID \r Rocket"
+        label.text = NSLocalizedString("SECTION_HEADER_ID_ROCKET", comment: "")
         label.font = FontMachine.boldAnnotation
         label.textColor = .white
         label.textAlignment = .left
@@ -47,7 +45,7 @@ final class LaunchListSectionHeaderCell: UITableViewHeaderFooterView, ReusableCe
     private let missionNameTitleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.text = "Mission Name"
+        label.text = NSLocalizedString("SECTION_HEADER_MISSION_NAME", comment: "")
         label.font = FontMachine.boldAnnotation
         label.textColor = .white
         label.textAlignment = .left

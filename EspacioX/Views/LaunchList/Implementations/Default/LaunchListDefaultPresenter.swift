@@ -78,10 +78,9 @@ extension LaunchListDefaultPresenter {
     }
     
     private func handleError(error: Error) {
-        // FIXME: Localize this
-        router.presentAlert(withTitle: "Error",
+        router.presentAlert(withTitle: NSLocalizedString("ERROR", comment: ""),
                             message: error.localizedDescription,
-                            options: [("OK", {})])
+                            options: [(NSLocalizedString("OK", comment: ""), {})])
     }
 }
 

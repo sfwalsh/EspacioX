@@ -3,17 +3,15 @@ import UIKit
 
 struct LaunchViewModel {
     
-    // FIXME: Localize strings
-    
     enum ReuseStatus {
         case used, new
         
         var localizedDescription: String {
             switch self {
             case .used:
-                return "Used"
+                return NSLocalizedString("REUSE_STATUS_USED", comment: "")
             case .new:
-                return "New"
+                return NSLocalizedString("REUSE_STATUS_NEW", comment: "")
             }
         }
     }
@@ -33,11 +31,13 @@ struct LaunchViewModel {
     }
     
     var missionName: String {
-        return launch.missionName ?? "Untitled Mission"
+        return launch.missionName ?? NSLocalizedString("BLANK_MISSION_TEXT",
+                                                       comment: "")
     }
     
     var missionId: String {
-        return launch.missionId.first ?? "N/A"
+        return launch.missionId.first ?? NSLocalizedString("BLANK_MISSION_ID",
+                                                           comment: "")
     }
     
     var formattedRocketName: String {
@@ -45,7 +45,7 @@ struct LaunchViewModel {
             return "\(reuseStatus.localizedDescription) \(rocketName)"
         }
         
-        return "N/A"
+        return NSLocalizedString("BLANK_ROCKET_NAME", comment: "")
     }
     
     var reusedStatusColor: UIColor {

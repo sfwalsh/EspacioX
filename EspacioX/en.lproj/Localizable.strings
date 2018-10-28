@@ -1,0 +1,38 @@
+
+
+// General
+
+"ERROR" = "Error";
+"OK" = "OK";
+
+
+// Launch Fetch Error Descriptions
+
+"LAUNCH_FETCH_ERROR_NOT_FOUND" = "Uh oh! something went wrong. Please try again later.";
+"LAUNCH_FETCH_ERROR_JSON" = "There was a problem reading the response from the server";
+"LAUNCH_FETCH_ERROR_REQUEST_ERROR" = "There was a problem communicating with mission control - try again later!";
+
+
+// Reuse Statuses
+
+"REUSE_STATUS_USED" = "Used";
+"REUSE_STATUS_NEW" = "New";
+
+
+// LaunchViewModel Localizables
+
+"BLANK_MISSION_TEXT" = "Untitled Mission";
+"BLANK_MISSION_ID" = "N/A";
+"BLANK_ROCKET_NAME" = "N/A";
+
+
+// Countdown Cell
+
+"COUNTDOWN_NEXT_LAUNCH" = "Next Launch";
+
+
+// Section Header
+
+"SECTION_HEADER_DATE" = "Date";
+"SECTION_HEADER_ID_ROCKET" = "Mission ID \r Rocket";
+"SECTION_HEADER_MISSION_NAME" = "Mission Name";

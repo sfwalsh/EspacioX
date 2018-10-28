@@ -11,12 +11,13 @@ extension LaunchFetchError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .notFound:
-            // FIXME: Localize these NSLocalizedString("", comment: "")
-            return "Uh oh! something went wrong. Please try again later."
+            return NSLocalizedString("LAUNCH_FETCH_ERROR_NOT_FOUND",
+                                     comment: "")
         case .jsonDecoding:
-            return "There was a problem reading the response from the server"
+            return NSLocalizedString("LAUNCH_FETCH_ERROR_JSON",
+                                     comment: "")
         case .requestError:
-            return "There was a problem communicating with mission control - try again later!"
+            return NSLocalizedString("LAUNCH_FETCH_ERROR_REQUEST_ERROR", comment: "")
         case .network(let description):
             return description
         }

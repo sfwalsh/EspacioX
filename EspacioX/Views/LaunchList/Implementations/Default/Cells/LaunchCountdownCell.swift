@@ -3,8 +3,6 @@ import UIKit
 
 final class LaunchCountdownCell: UITableViewCell, ReusableCell {
     
-    // FIXME: Strings
-    
     private enum Layout {
         static let insets: UIEdgeInsets = UIEdgeInsets(top: 24, left: 12, bottom: 24, right: 12)
     }
@@ -14,7 +12,7 @@ final class LaunchCountdownCell: UITableViewCell, ReusableCell {
         label.font = FontMachine.body
         label.textColor = .white
         label.textAlignment = .left
-        label.text = "Next Launch"
+        label.text = NSLocalizedString("COUNTDOWN_NEXT_LAUNCH", comment: "")
         
         return label
     }()
