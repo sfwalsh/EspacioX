@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		BF3D477D21866BDB0082EF75 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D477C21866BDB0082EF75 /* GradientView.swift */; };
 		BF3D4782218670910082EF75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF3D4784218670910082EF75 /* Localizable.strings */; };
+		BF3D4787218674DF0082EF75 /* LaunchDetailDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D4786218674DF0082EF75 /* LaunchDetailDefaultViewController.swift */; };
+		BF3D478C218675170082EF75 /* LaunchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D478B218675170082EF75 /* LaunchDetailViewController.swift */; };
+		BF3D478F218675680082EF75 /* LaunchDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D478E218675680082EF75 /* LaunchDetailPresenter.swift */; };
+		BF3D4791218675A40082EF75 /* LaunchDetailDefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D4790218675A40082EF75 /* LaunchDetailDefaultPresenter.swift */; };
+		BF3D47932186770F0082EF75 /* LaunchDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D47922186770F0082EF75 /* LaunchDetailBuilder.swift */; };
 		BF8CCF302185EB9500AB87E6 /* FirstStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF2F2185EB9500AB87E6 /* FirstStage.swift */; };
 		BF8CCF322185EBA500AB87E6 /* SecondStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF312185EBA500AB87E6 /* SecondStage.swift */; };
 		BF8CCF342185EBB500AB87E6 /* Fairings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF332185EBB500AB87E6 /* Fairings.swift */; };
@@ -60,6 +65,11 @@
 		BF3D477F2186703F0082EF75 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		BF3D4783218670910082EF75 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF3D4785218670950082EF75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF3D4786218674DF0082EF75 /* LaunchDetailDefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailDefaultViewController.swift; sourceTree = "<group>"; };
+		BF3D478B218675170082EF75 /* LaunchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailViewController.swift; sourceTree = "<group>"; };
+		BF3D478E218675680082EF75 /* LaunchDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailPresenter.swift; sourceTree = "<group>"; };
+		BF3D4790218675A40082EF75 /* LaunchDetailDefaultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailDefaultPresenter.swift; sourceTree = "<group>"; };
+		BF3D47922186770F0082EF75 /* LaunchDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailBuilder.swift; sourceTree = "<group>"; };
 		BF8CCF2F2185EB9500AB87E6 /* FirstStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStage.swift; sourceTree = "<group>"; };
 		BF8CCF312185EBA500AB87E6 /* SecondStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStage.swift; sourceTree = "<group>"; };
 		BF8CCF332185EBB500AB87E6 /* Fairings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fairings.swift; sourceTree = "<group>"; };
@@ -124,6 +134,42 @@
 				BF3D477C21866BDB0082EF75 /* GradientView.swift */,
 			);
 			path = Widgets;
+			sourceTree = "<group>";
+		};
+		BF3D4788218674EB0082EF75 /* LaunchDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BF3D478D2186751B0082EF75 /* Protocols */,
+				BF3D4789218674F40082EF75 /* Implementations */,
+			);
+			path = LaunchDetail;
+			sourceTree = "<group>";
+		};
+		BF3D4789218674F40082EF75 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				BF3D478A218674FC0082EF75 /* Default */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		BF3D478A218674FC0082EF75 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				BF3D47922186770F0082EF75 /* LaunchDetailBuilder.swift */,
+				BF3D4790218675A40082EF75 /* LaunchDetailDefaultPresenter.swift */,
+				BF3D4786218674DF0082EF75 /* LaunchDetailDefaultViewController.swift */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		BF3D478D2186751B0082EF75 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BF3D478E218675680082EF75 /* LaunchDetailPresenter.swift */,
+				BF3D478B218675170082EF75 /* LaunchDetailViewController.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		BF8CCF352185EBC500AB87E6 /* Launch */ = {
@@ -277,6 +323,7 @@
 				BFE55FF22184F720001B518B /* LaunchList */,
 				BFE560122184FCA9001B518B /* Protocols */,
 				BF3D477E21866BE40082EF75 /* Widgets */,
+				BF3D4788218674EB0082EF75 /* LaunchDetail */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -409,6 +456,7 @@
 				BFE560002184F945001B518B /* LaunchListRouter.swift in Sources */,
 				BFE55FF12184F71B001B518B /* LaunchListViewController.swift in Sources */,
 				BFE560042184F96C001B518B /* LaunchListDefaultRouter.swift in Sources */,
+				BF3D478C218675170082EF75 /* LaunchDetailViewController.swift in Sources */,
 				BFE560022184F960001B518B /* LaunchListDefaultInteractor.swift in Sources */,
 				BFE5600E2184FC92001B518B /* AlertPresentable.swift in Sources */,
 				BFE560112184FCA3001B518B /* Router.swift in Sources */,
@@ -425,11 +473,15 @@
 				BFE5600C2184FC90001B518B /* ReusableCell.swift in Sources */,
 				BFE560172184FFA3001B518B /* API.swift in Sources */,
 				BF8CCF412186175600AB87E6 /* FontMachine.swift in Sources */,
+				BF3D47932186770F0082EF75 /* LaunchDetailBuilder.swift in Sources */,
 				BF8CCF3A2185FCA400AB87E6 /* LaunchViewModel.swift in Sources */,
 				BFE55FFB2184F8B5001B518B /* LaunchListPresenter.swift in Sources */,
 				BF8CCF322185EBA500AB87E6 /* SecondStage.swift in Sources */,
+				BF3D478F218675680082EF75 /* LaunchDetailPresenter.swift in Sources */,
 				BF8CCF342185EBB500AB87E6 /* Fairings.swift in Sources */,
 				BFE5601F2185073E001B518B /* LaunchFetchError.swift in Sources */,
+				BF3D4787218674DF0082EF75 /* LaunchDetailDefaultViewController.swift in Sources */,
+				BF3D4791218675A40082EF75 /* LaunchDetailDefaultPresenter.swift in Sources */,
 				BFE5601D2185067E001B518B /* Launch.swift in Sources */,
 				BFE5601A21850296001B518B /* NetworkResult.swift in Sources */,
 				BF3D477D21866BDB0082EF75 /* GradientView.swift in Sources */,

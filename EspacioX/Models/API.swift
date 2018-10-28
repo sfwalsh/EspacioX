@@ -37,8 +37,4 @@ enum API {
     static func buildNextLaunchRequest() -> URLRequest? {
         return createRequest(withPath: "/v3/launches/next", method: .GET)
     }
-    
-    static func buildLaunchDetailRequest(forId id: Int) -> URLRequest? {
-        return createRequest(withPath: "/v3/launches/id", method: .GET)
-    }
 }

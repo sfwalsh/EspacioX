@@ -126,8 +126,14 @@ extension LaunchListDefaultPresenter {
     }
     
     func didSelectItem(atIndexPath indexPath: IndexPath) {
-        guard let item = item(atIndexPath: indexPath) else { return }
-        // MARK: Implement this
+        guard let section = Section(rawValue: indexPath.section) else { return }
+        switch section {
+        case .nextLaunch:
+            break
+        case .upcomingLaunches:
+            guard let launch = upcomingLaunches[safe: indexPath.row] else { return }
+            router.routeToDetail(withLaunch: launch)
+        }
     }
     
     func shouldShowHeader(forSection section: Int) -> Bool {

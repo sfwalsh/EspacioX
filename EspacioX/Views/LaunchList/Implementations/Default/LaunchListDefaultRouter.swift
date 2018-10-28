@@ -5,8 +5,16 @@ final class LaunchListDefaultRouter: LaunchListRouter {
     
     weak var view: Navigatable?
     
-    func routeToDetail(withId id: Int) {
+    func routeToDetail(withLaunch launch: Launch) {
+        let detailView = LaunchDetailBuilder.build(withLaunch: launch)
         
+        guard let navigationController = view?.navigationController else {
+            view?.present(detailView, animated: true, completion: nil)
+            return
+        }
+        
+        navigationController.pushViewController(detailView,
+                                                animated: true)
     }
     
     func presentAlert(withTitle title: String,
