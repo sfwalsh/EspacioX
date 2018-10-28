@@ -11,6 +11,8 @@
 		BF8CCF322185EBA500AB87E6 /* SecondStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF312185EBA500AB87E6 /* SecondStage.swift */; };
 		BF8CCF342185EBB500AB87E6 /* Fairings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF332185EBB500AB87E6 /* Fairings.swift */; };
 		BF8CCF382185F12000AB87E6 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF372185F12000AB87E6 /* Rocket.swift */; };
+		BF8CCF3A2185FCA400AB87E6 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF392185FCA400AB87E6 /* LaunchViewModel.swift */; };
+		BF8CCF3D2185FD3000AB87E6 /* LaunchListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF3C2185FD3000AB87E6 /* LaunchListItem.swift */; };
 		BFE55FCF2184F0A8001B518B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE55FCE2184F0A8001B518B /* AppDelegate.swift */; };
 		BFE55FD62184F0A9001B518B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE55FD52184F0A9001B518B /* Assets.xcassets */; };
 		BFE55FD92184F0A9001B518B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE55FD72184F0A9001B518B /* LaunchScreen.storyboard */; };
@@ -26,7 +28,6 @@
 		BFE560042184F96C001B518B /* LaunchListDefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE560032184F96C001B518B /* LaunchListDefaultRouter.swift */; };
 		BFE560062184F985001B518B /* LaunchListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE560052184F985001B518B /* LaunchListBuilder.swift */; };
 		BFE560082184FC88001B518B /* Navigatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE560072184FC86001B518B /* Navigatable.swift */; };
-		BFE5600A2184FC8D001B518B /* DatasourceOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE560092184FC8D001B518B /* DatasourceOperator.swift */; };
 		BFE5600C2184FC90001B518B /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5600B2184FC90001B518B /* ReusableCell.swift */; };
 		BFE5600E2184FC92001B518B /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5600D2184FC92001B518B /* AlertPresentable.swift */; };
 		BFE560112184FCA3001B518B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE560102184FCA2001B518B /* Router.swift */; };
@@ -52,6 +53,8 @@
 		BF8CCF312185EBA500AB87E6 /* SecondStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStage.swift; sourceTree = "<group>"; };
 		BF8CCF332185EBB500AB87E6 /* Fairings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fairings.swift; sourceTree = "<group>"; };
 		BF8CCF372185F12000AB87E6 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		BF8CCF392185FCA400AB87E6 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		BF8CCF3C2185FD3000AB87E6 /* LaunchListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListItem.swift; sourceTree = "<group>"; };
 		BFE55FCB2184F0A8001B518B /* EspacioX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EspacioX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE55FCE2184F0A8001B518B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE55FD52184F0A9001B518B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,7 +74,6 @@
 		BFE560032184F96C001B518B /* LaunchListDefaultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListDefaultRouter.swift; sourceTree = "<group>"; };
 		BFE560052184F985001B518B /* LaunchListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListBuilder.swift; sourceTree = "<group>"; };
 		BFE560072184FC86001B518B /* Navigatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigatable.swift; sourceTree = "<group>"; };
-		BFE560092184FC8D001B518B /* DatasourceOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatasourceOperator.swift; sourceTree = "<group>"; };
 		BFE5600B2184FC90001B518B /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 		BFE5600D2184FC92001B518B /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		BFE560102184FCA2001B518B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -120,6 +122,15 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		BF8CCF3B2185FD0700AB87E6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BF8CCF392185FCA400AB87E6 /* LaunchViewModel.swift */,
+				BF8CCF3C2185FD3000AB87E6 /* LaunchListItem.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		BFE55FC22184F0A8001B518B = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +175,7 @@
 		BFE55FF22184F720001B518B /* LaunchList */ = {
 			isa = PBXGroup;
 			children = (
+				BF8CCF3B2185FD0700AB87E6 /* ViewModels */,
 				BFE55FF42184F731001B518B /* Protocols */,
 				BFE55FF32184F728001B518B /* Implementations */,
 			);
@@ -212,7 +224,6 @@
 		BFE560122184FCA9001B518B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				BFE560092184FC8D001B518B /* DatasourceOperator.swift */,
 				BFE560142184FD8F001B518B /* RouteType.swift */,
 				BFE5600B2184FC90001B518B /* ReusableCell.swift */,
 				BFE560072184FC86001B518B /* Navigatable.swift */,
@@ -361,14 +372,15 @@
 				BFE560112184FCA3001B518B /* Router.swift in Sources */,
 				BFE55FCF2184F0A8001B518B /* AppDelegate.swift in Sources */,
 				BFE560152184FD8F001B518B /* RouteType.swift in Sources */,
+				BF8CCF3D2185FD3000AB87E6 /* LaunchListItem.swift in Sources */,
 				BFE55FFE2184F8FC001B518B /* LaunchListInteractor.swift in Sources */,
 				BFE55FF62184F743001B518B /* SystemExtensions.swift in Sources */,
 				BF8CCF382185F12000AB87E6 /* Rocket.swift in Sources */,
 				BF8CCF302185EB9500AB87E6 /* FirstStage.swift in Sources */,
 				BFE55FEF2184F6E4001B518B /* LaunchListDefaultViewController.swift in Sources */,
-				BFE5600A2184FC8D001B518B /* DatasourceOperator.swift in Sources */,
 				BFE5600C2184FC90001B518B /* ReusableCell.swift in Sources */,
 				BFE560172184FFA3001B518B /* API.swift in Sources */,
+				BF8CCF3A2185FCA400AB87E6 /* LaunchViewModel.swift in Sources */,
 				BFE55FFB2184F8B5001B518B /* LaunchListPresenter.swift in Sources */,
 				BF8CCF322185EBA500AB87E6 /* SecondStage.swift in Sources */,
 				BF8CCF342185EBB500AB87E6 /* Fairings.swift in Sources */,

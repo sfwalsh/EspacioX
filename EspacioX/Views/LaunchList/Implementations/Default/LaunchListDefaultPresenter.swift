@@ -7,6 +7,9 @@ final class LaunchListDefaultPresenter {
     private let router: LaunchListRouter
     private weak var view: LaunchListViewController?
     
+    private var upcomingLaunches: [Launch] = []
+    private var nextLaunch: Launch?
+    
     init(withInteractor interactor: LaunchListInteractor,
          router: LaunchListRouter) {
         self.interactor = interactor
@@ -29,6 +32,11 @@ extension LaunchListDefaultPresenter: LaunchListPresenter {
         fetchUpcomingLaunches()
         fetchNextLaunch()
     }
+    
+    func didPullToRefresh() {
+        fetchUpcomingLaunches()
+        fetchNextLaunch()
+    }
 }
 
 
@@ -43,6 +51,7 @@ extension LaunchListDefaultPresenter {
                 self?.view?.hideLoader()
                 switch result {
                 case .success(let launch):
+                    self?.nextLaunch = launch
                     self?.view?.reloadView()
                 case .failure(let error):
                     self?.handleError(error: error)
@@ -58,6 +67,7 @@ extension LaunchListDefaultPresenter {
                 self?.view?.hideLoader()
                 switch result {
                 case .success(let launches):
+                    self?.upcomingLaunches = launches
                     self?.view?.reloadView()
                 case .failure(let error):
                     self?.handleError(error: error)
@@ -71,5 +81,56 @@ extension LaunchListDefaultPresenter {
         router.presentAlert(withTitle: "Error",
                             message: error.localizedDescription,
                             options: [("OK", {})])
+    }
+}
+
+
+// MARK: Datasource Operator Conformance
+
+extension LaunchListDefaultPresenter {
+    
+    private enum Section: Int {
+        case nextLaunch = 0
+        case upcomingLaunches = 1
+    }
+
+    func numberOfSections() -> Int {
+        return 2
+    }
+    
+    func numberOfItems(inSection section: Int) -> Int {
+        guard let section = Section(rawValue: section) else { return 0 }
+        switch section {
+        case .nextLaunch:
+            if let _ = nextLaunch {
+                return 1
+            }
+            return 0
+        case .upcomingLaunches:
+            return upcomingLaunches.count
+        }
+    }
+    
+    func item(atIndexPath indexPath: IndexPath) -> LaunchListItem? {
+        guard let section = Section(rawValue: indexPath.section) else { return nil }
+        switch section {
+        case .nextLaunch:
+            guard let nextLaunch = nextLaunch else { return nil }
+            let launchViewModel = LaunchViewModel(withLaunch: nextLaunch)
+            return LaunchListItem.countdown(launch: launchViewModel)
+        case .upcomingLaunches:
+            guard let launch = upcomingLaunches[safe: indexPath.row] else { return nil }
+            let launchViewModel = LaunchViewModel(withLaunch: launch)
+            return LaunchListItem.listItem(launch: launchViewModel)
+        }
+    }
+    
+    func didSelectItem(atIndexPath indexPath: IndexPath) {
+        guard let item = item(atIndexPath: indexPath) else { return }
+        // MARK: Implement this
+    }
+    
+    func sectionTitle(forSection section: Int) -> String? {
+        return nil
     }
 }
