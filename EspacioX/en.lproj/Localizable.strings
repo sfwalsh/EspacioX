@@ -26,9 +26,10 @@
 "BLANK_ROCKET_NAME" = "N/A";
 
 
-// Countdown Cell
+// Countdown
 
 "COUNTDOWN_NEXT_LAUNCH" = "Next Launch";
+"COUNTDOWN_ARBITRARY_LAUNCH" = "Countdown to Launch";
 
 
 // Section Header

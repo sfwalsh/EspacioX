@@ -1,13 +1,16 @@
 
 import Foundation
 
+// This is only a dummy / stub detail view to demonstrate the pattern.
+// In a full app this would have the same components as the LaunchList module
+
 final class LaunchDetailDefaultPresenter: LaunchDetailPresenter {
 
     private weak var view: LaunchDetailViewController?
     
     private let launch: Launch
     
-    private var viewModel: LaunchViewModel {
+    var viewModel: LaunchViewModel {
         return LaunchViewModel(withLaunch: launch)
     }
     
@@ -28,5 +31,6 @@ extension LaunchDetailDefaultPresenter {
     func viewDidLoad() {
         view?.performInitialSetup()
         view?.setTitle(title: viewModel.missionName)
+        view?.reloadView()
     }
 }
