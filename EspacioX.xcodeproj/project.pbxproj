@@ -13,6 +13,8 @@
 		BF8CCF382185F12000AB87E6 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF372185F12000AB87E6 /* Rocket.swift */; };
 		BF8CCF3A2185FCA400AB87E6 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF392185FCA400AB87E6 /* LaunchViewModel.swift */; };
 		BF8CCF3D2185FD3000AB87E6 /* LaunchListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF3C2185FD3000AB87E6 /* LaunchListItem.swift */; };
+		BF8CCF3F2186173600AB87E6 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF3E2186173600AB87E6 /* Palette.swift */; };
+		BF8CCF412186175600AB87E6 /* FontMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF402186175600AB87E6 /* FontMachine.swift */; };
 		BFE55FCF2184F0A8001B518B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE55FCE2184F0A8001B518B /* AppDelegate.swift */; };
 		BFE55FD62184F0A9001B518B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE55FD52184F0A9001B518B /* Assets.xcassets */; };
 		BFE55FD92184F0A9001B518B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE55FD72184F0A9001B518B /* LaunchScreen.storyboard */; };
@@ -55,6 +57,8 @@
 		BF8CCF372185F12000AB87E6 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		BF8CCF392185FCA400AB87E6 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		BF8CCF3C2185FD3000AB87E6 /* LaunchListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListItem.swift; sourceTree = "<group>"; };
+		BF8CCF3E2186173600AB87E6 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		BF8CCF402186175600AB87E6 /* FontMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMachine.swift; sourceTree = "<group>"; };
 		BFE55FCB2184F0A8001B518B /* EspacioX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EspacioX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE55FCE2184F0A8001B518B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE55FD52184F0A9001B518B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				BFE55FF52184F743001B518B /* SystemExtensions.swift */,
+				BF8CCF3E2186173600AB87E6 /* Palette.swift */,
+				BF8CCF402186175600AB87E6 /* FontMachine.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				BFE560062184F985001B518B /* LaunchListBuilder.swift in Sources */,
 				BFE55FF92184F7D4001B518B /* LaunchListDefaultPresenter.swift in Sources */,
 				BFE560082184FC88001B518B /* Navigatable.swift in Sources */,
+				BF8CCF3F2186173600AB87E6 /* Palette.swift in Sources */,
 				BFE560002184F945001B518B /* LaunchListRouter.swift in Sources */,
 				BFE55FF12184F71B001B518B /* LaunchListViewController.swift in Sources */,
 				BFE560042184F96C001B518B /* LaunchListDefaultRouter.swift in Sources */,
@@ -380,6 +387,7 @@
 				BFE55FEF2184F6E4001B518B /* LaunchListDefaultViewController.swift in Sources */,
 				BFE5600C2184FC90001B518B /* ReusableCell.swift in Sources */,
 				BFE560172184FFA3001B518B /* API.swift in Sources */,
+				BF8CCF412186175600AB87E6 /* FontMachine.swift in Sources */,
 				BF8CCF3A2185FCA400AB87E6 /* LaunchViewModel.swift in Sources */,
 				BFE55FFB2184F8B5001B518B /* LaunchListPresenter.swift in Sources */,
 				BF8CCF322185EBA500AB87E6 /* SecondStage.swift in Sources */,

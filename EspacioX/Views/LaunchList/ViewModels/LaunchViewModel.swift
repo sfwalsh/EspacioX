@@ -1,5 +1,5 @@
 
-import Foundation
+import UIKit
 
 struct LaunchViewModel {
     private let launch: Launch
@@ -20,11 +20,11 @@ struct LaunchViewModel {
         return ""
     }
     
-    var rocketName: String {
+    var formattedRocketName: String {
         return ""
     }
     
-    var hasReusedPieces: Bool {
-        return false
+    var reusedStatusColor: UIColor {
+        return .white
     }
 }
