@@ -33,7 +33,6 @@ final class LaunchCountdownCell: UITableViewCell, ReusableCell {
         label.font = FontMachine.extraLargeFont
         label.textColor = .white
         label.textAlignment = .left
-        label.adjustsFontSizeToFitWidth = true
         
         return label
     }()
@@ -73,6 +72,9 @@ final class LaunchCountdownCell: UITableViewCell, ReusableCell {
         return dateFormatter
     }()
     
+    private var viewModel: LaunchViewModel?
+    private var timer: Timer?
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
@@ -87,8 +89,17 @@ final class LaunchCountdownCell: UITableViewCell, ReusableCell {
         
         rocketLabel.textColor = viewModel.reusedStatusColor
         rocketLabel.text = viewModel.formattedRocketName
-        setupCountdownLabel(forViewModel: viewModel)
+        setupCountdownTimer(forViewModel: viewModel)
         setupLaunchDateLabel(forViewModel: viewModel)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        resetTimer()
+    }
+    
+    deinit {
+        resetTimer()
     }
 }
 
@@ -104,7 +115,8 @@ extension LaunchCountdownCell {
         return formatter
     }
     
-    private func setupCountdownLabel(forViewModel viewModel: LaunchViewModel) {
+    private func updateCountdownLabel() {
+        guard let viewModel = viewModel else { return }
         let dayHourMinuteString = viewModel.createCountdownString(forDateFormatter: createDateFormatter(withFormat: "d'd' H'h' m'm'"))
         let secondsString = viewModel.createCountdownString(forDateFormatter: createDateFormatter(withFormat: "s's'"))
         let combinedString = dayHourMinuteString + " " + secondsString
@@ -116,6 +128,26 @@ extension LaunchCountdownCell {
     
     private func setupLaunchDateLabel(forViewModel viewModel: LaunchViewModel) {
         launchDateLabel.text = viewModel.createMissionTimeString(forDateFormatter: launchDateFormatter)
+    }
+}
+
+
+// MARK: Timer Related
+
+extension LaunchCountdownCell {
+    
+    private func setupCountdownTimer(forViewModel viewModel: LaunchViewModel) {
+        resetTimer()
+        self.viewModel = viewModel
+        updateCountdownLabel()
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] _ in
+            self?.updateCountdownLabel()
+        })
+    }
+    
+    private func resetTimer() {
+        timer?.invalidate()
+        timer = nil
     }
 }
 
