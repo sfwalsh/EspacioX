@@ -5,6 +5,11 @@ final class LaunchListDefaultViewController: UIViewController, Navigatable {
     
     internal let presenter: LaunchListPresenter
     
+    private let tableView: UITableView = {
+        let tableView = UITableView(frame: .zero)
+        return tableView
+    }()
+    
     init(withPresenter presenter: LaunchListPresenter) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -29,8 +34,13 @@ final class LaunchListDefaultViewController: UIViewController, Navigatable {
 
 extension LaunchListDefaultViewController: LaunchListViewController {
     
+    func performInitialSetup() {
+        setupSubviews()
+        setupConstraints()
+    }
+    
     func reloadView() {
-        
+        tableView.reloadData()
     }
     
     func showLoader() {
@@ -39,5 +49,26 @@ extension LaunchListDefaultViewController: LaunchListViewController {
     
     func hideLoader() {
         
+    }
+}
+
+
+// MARK: Layout, etc.
+
+extension LaunchListDefaultViewController {
+    
+    private func setupSubviews() {
+        view.addSubviewsForAutolayout(views: [
+            tableView
+            ])
+    }
+    
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
     }
 }

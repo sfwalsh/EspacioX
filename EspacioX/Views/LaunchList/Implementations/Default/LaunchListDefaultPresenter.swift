@@ -25,16 +25,9 @@ extension LaunchListDefaultPresenter: LaunchListPresenter {
     }
     
     func viewDidLoad() {
-        interactor.fetchUpcomingLaunches { [weak self] (result) in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let launches):
-                    break
-                case .failure(let error):
-                    self?.handleError(error: error)
-                }
-            }
-        }
+        view?.performInitialSetup()
+        fetchUpcomingLaunches()
+        fetchNextLaunch()
     }
 }
 
@@ -42,6 +35,36 @@ extension LaunchListDefaultPresenter: LaunchListPresenter {
 // MARK: Private functions
 
 extension LaunchListDefaultPresenter {
+    
+    private func fetchNextLaunch() {
+        view?.showLoader()
+        interactor.fetchNextLaunch { [weak self] (result) in
+            DispatchQueue.main.async {
+                self?.view?.hideLoader()
+                switch result {
+                case .success(let launch):
+                    self?.view?.reloadView()
+                case .failure(let error):
+                    self?.handleError(error: error)
+                }
+            }
+        }
+    }
+    
+    private func fetchUpcomingLaunches() {
+        view?.showLoader()
+        interactor.fetchUpcomingLaunches { [weak self] (result) in
+            DispatchQueue.main.async {
+                self?.view?.hideLoader()
+                switch result {
+                case .success(let launches):
+                    self?.view?.reloadView()
+                case .failure(let error):
+                    self?.handleError(error: error)
+                }
+            }
+        }
+    }
     
     private func handleError(error: Error) {
         // FIXME: Localize this
