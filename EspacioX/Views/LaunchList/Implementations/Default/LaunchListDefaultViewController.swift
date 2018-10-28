@@ -5,10 +5,18 @@ final class LaunchListDefaultViewController: UIViewController, Navigatable {
     
     private enum Layout {
         static let countdownHeight: CGFloat = 180
-        static let launchInfoHeight: CGFloat = 63.0
+        static let launchInfoHeight: CGFloat = 70.0
+        static let headerHeight: CGFloat = 50.0
     }
     
     internal let presenter: LaunchListPresenter
+    
+    private let backgroundGradientView: GradientView = {
+        let view = GradientView(frame: .zero,
+                                topColor: Palette.midnightBlue,
+                                bottomColor: Palette.iodineBlack)
+        return view
+    }()
     
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
@@ -20,7 +28,7 @@ final class LaunchListDefaultViewController: UIViewController, Navigatable {
         tableView.register(LaunchInfoCell.self,
                            forCellReuseIdentifier: LaunchInfoCell.reuseIdentifier)
         tableView.register(LaunchListSectionHeaderCell.self,
-                           forCellReuseIdentifier: LaunchListSectionHeaderCell.reuseIdentifier)
+                           forHeaderFooterViewReuseIdentifier: LaunchListSectionHeaderCell.reuseIdentifier)
         
         return tableView
     }()
@@ -90,6 +98,7 @@ extension LaunchListDefaultViewController {
         setupTableView()
         setupRefreshControl()
         view.addSubviewsForAutolayout(views: [
+            backgroundGradientView,
             tableView
             ])
     }
@@ -110,10 +119,17 @@ extension LaunchListDefaultViewController {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
+            
+            backgroundGradientView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            backgroundGradientView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            backgroundGradientView.topAnchor.constraint(equalTo: view.topAnchor),
+            backgroundGradientView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            
             ])
     }
 }
@@ -167,5 +183,18 @@ extension LaunchListDefaultViewController: UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         presenter.didSelectItem(atIndexPath: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   heightForHeaderInSection section: Int) -> CGFloat {
+        guard presenter.shouldShowHeader(forSection: section) else { return 0 }
+        return Layout.headerHeight
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   viewForHeaderInSection section: Int) -> UIView? {
+        guard presenter.shouldShowHeader(forSection: section) else { return nil }
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: LaunchListSectionHeaderCell.reuseIdentifier)
+        return view
     }
 }

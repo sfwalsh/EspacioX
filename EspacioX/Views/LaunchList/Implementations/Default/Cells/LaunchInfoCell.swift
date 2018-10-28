@@ -4,10 +4,10 @@ import UIKit
 final class LaunchInfoCell: UITableViewCell, ReusableCell {
     
     private enum Layout {
-        static let dateWidthMultiplier: CGFloat = 0.16
+        static let dateWidthMultiplier: CGFloat = 0.18
         static let missionRocketWidthMultiplier: CGFloat = 0.26
         static let interitemSpacing: CGFloat = 8
-        static let insets: UIEdgeInsets = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
+        static let insets: UIEdgeInsets = UIEdgeInsets(top: 2, left: 12, bottom: 2, right: 12)
     }
  
     private let launchDateLabel: UILabel = {
@@ -31,6 +31,7 @@ final class LaunchInfoCell: UITableViewCell, ReusableCell {
     
     private let rocketInfoLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         label.font = FontMachine.boldAnnotation
         label.textColor = .white
         label.textAlignment = .left
@@ -51,8 +52,9 @@ final class LaunchInfoCell: UITableViewCell, ReusableCell {
     private let missionIdRocketStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.distribution = .fillEqually
+        stackView.distribution = .fillProportionally
         stackView.alignment = .leading
+        stackView.spacing = 0
         
         return stackView
     }()
@@ -62,7 +64,7 @@ final class LaunchInfoCell: UITableViewCell, ReusableCell {
         stackView.axis = .horizontal
         stackView.spacing = Layout.interitemSpacing
         stackView.alignment = .center
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .fill
         
         return stackView
     }()

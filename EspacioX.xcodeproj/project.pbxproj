@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF3D477D21866BDB0082EF75 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D477C21866BDB0082EF75 /* GradientView.swift */; };
 		BF8CCF302185EB9500AB87E6 /* FirstStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF2F2185EB9500AB87E6 /* FirstStage.swift */; };
 		BF8CCF322185EBA500AB87E6 /* SecondStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF312185EBA500AB87E6 /* SecondStage.swift */; };
 		BF8CCF342185EBB500AB87E6 /* Fairings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF332185EBB500AB87E6 /* Fairings.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF3D477C21866BDB0082EF75 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		BF8CCF2F2185EB9500AB87E6 /* FirstStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStage.swift; sourceTree = "<group>"; };
 		BF8CCF312185EBA500AB87E6 /* SecondStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStage.swift; sourceTree = "<group>"; };
 		BF8CCF332185EBB500AB87E6 /* Fairings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fairings.swift; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF3D477E21866BE40082EF75 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				BF3D477C21866BDB0082EF75 /* GradientView.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
 		BF8CCF352185EBC500AB87E6 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +271,7 @@
 			children = (
 				BFE55FF22184F720001B518B /* LaunchList */,
 				BFE560122184FCA9001B518B /* Protocols */,
+				BF3D477E21866BE40082EF75 /* Widgets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -415,6 +426,7 @@
 				BFE5601F2185073E001B518B /* LaunchFetchError.swift in Sources */,
 				BFE5601D2185067E001B518B /* Launch.swift in Sources */,
 				BFE5601A21850296001B518B /* NetworkResult.swift in Sources */,
+				BF3D477D21866BDB0082EF75 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

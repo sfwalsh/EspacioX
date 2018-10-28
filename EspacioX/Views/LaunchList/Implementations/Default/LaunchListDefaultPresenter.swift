@@ -131,7 +131,14 @@ extension LaunchListDefaultPresenter {
         // MARK: Implement this
     }
     
-    func sectionTitle(forSection section: Int) -> String? {
-        return nil
+    func shouldShowHeader(forSection section: Int) -> Bool {
+        guard let section = Section(rawValue: section) else { return false }
+        
+        switch section {
+        case .upcomingLaunches:
+            return upcomingLaunches.count > 0
+        case .nextLaunch:
+            return false
+        }
     }
 }

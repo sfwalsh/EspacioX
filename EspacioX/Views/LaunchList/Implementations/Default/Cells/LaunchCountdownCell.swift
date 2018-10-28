@@ -89,7 +89,7 @@ final class LaunchCountdownCell: UITableViewCell, ReusableCell {
     func setup(withViewModel viewModel: LaunchViewModel) {
         
         rocketLabel.textColor = viewModel.reusedStatusColor
-        rocketLabel.text = viewModel.formattedRocketName
+        rocketLabel.text = viewModel.formattedRocketName + " 🚀"
         setupCountdownTimer(forViewModel: viewModel)
         setupLaunchDateLabel(forViewModel: viewModel)
     }
@@ -159,10 +159,17 @@ extension LaunchCountdownCell {
     
     private func setupUI() {
         backgroundColor = .clear
+        setupSelectedBackgroundView()
         setupSubviews()
         setupConstraints()
     }
     
+    private func setupSelectedBackgroundView() {
+        let selectedBackgroundView = UIView()
+        selectedBackgroundView.backgroundColor = Palette.lighterShadeOfWhite
+        self.selectedBackgroundView = selectedBackgroundView
+    }
+
     private func setupSubviews() {
         titleStackView.addArrangedSubviews(views: [
             titleLabel,
