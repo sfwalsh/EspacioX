@@ -33,6 +33,7 @@ final class LaunchCountdownCell: UITableViewCell, ReusableCell {
         label.font = FontMachine.extraLargeFont
         label.textColor = .white
         label.textAlignment = .left
+        label.adjustsFontSizeToFitWidth = true
         
         return label
     }()
