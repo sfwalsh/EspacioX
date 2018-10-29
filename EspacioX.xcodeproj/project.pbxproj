@@ -49,7 +49,6 @@
 		BFE560062184F985001B518B /* LaunchListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE560052184F985001B518B /* LaunchListBuilder.swift */; };
 		BFE560082184FC88001B518B /* Navigatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE560072184FC86001B518B /* Navigatable.swift */; };
 		BFE5600C2184FC90001B518B /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5600B2184FC90001B518B /* ReusableCell.swift */; };
-		BFE5600E2184FC92001B518B /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5600D2184FC92001B518B /* AlertPresentable.swift */; };
 		BFE560112184FCA3001B518B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE560102184FCA2001B518B /* Router.swift */; };
 		BFE560152184FD8F001B518B /* RouteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE560142184FD8F001B518B /* RouteType.swift */; };
 		BFE560172184FFA3001B518B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE560162184FFA3001B518B /* API.swift */; };
@@ -117,7 +116,6 @@
 		BFE560052184F985001B518B /* LaunchListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListBuilder.swift; sourceTree = "<group>"; };
 		BFE560072184FC86001B518B /* Navigatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigatable.swift; sourceTree = "<group>"; };
 		BFE5600B2184FC90001B518B /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
-		BFE5600D2184FC92001B518B /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		BFE560102184FCA2001B518B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		BFE560142184FD8F001B518B /* RouteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteType.swift; sourceTree = "<group>"; };
 		BFE560162184FFA3001B518B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -360,7 +358,6 @@
 				BFE5600B2184FC90001B518B /* ReusableCell.swift */,
 				BFE560072184FC86001B518B /* Navigatable.swift */,
 				BFE560102184FCA2001B518B /* Router.swift */,
-				BFE5600D2184FC92001B518B /* AlertPresentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -507,7 +504,6 @@
 				BFE560042184F96C001B518B /* LaunchListDefaultRouter.swift in Sources */,
 				BF3D478C218675170082EF75 /* LaunchDetailViewController.swift in Sources */,
 				BFE560022184F960001B518B /* LaunchListDefaultInteractor.swift in Sources */,
-				BFE5600E2184FC92001B518B /* AlertPresentable.swift in Sources */,
 				BFE560112184FCA3001B518B /* Router.swift in Sources */,
 				BFE55FCF2184F0A8001B518B /* AppDelegate.swift in Sources */,
 				BFE560152184FD8F001B518B /* RouteType.swift in Sources */,
