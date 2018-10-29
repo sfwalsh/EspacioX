@@ -1,9 +1,9 @@
 
-import Foundation
+import UIKit
 
 @testable import EspacioX
 
-final class MockLaunchListViewController: LaunchListViewController {
+final class MockLaunchListViewController: LaunchListViewController, Navigatable {
     
     struct DidCall {
         var performInitialSetup: Bool = false
@@ -48,4 +48,11 @@ final class MockLaunchListViewController: LaunchListViewController {
     func hideLoader() {
         didCall.hideLoader = true
     }
+    
+    
+    // MARK: Navigatable Conformance
+    
+    var navigationController: UINavigationController?
+    
+    func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?) { }
 }

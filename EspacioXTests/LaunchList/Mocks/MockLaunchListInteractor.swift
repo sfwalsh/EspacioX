@@ -10,7 +10,7 @@ final class MockLaunchListInteractor: LaunchListInteractor {
         var fetchNextLaunch: Bool = false
     }
     
-    private var didCall = DidCall()
+    var didCall = DidCall()
     
     private let upcomingLaunchResult: NetworkResult<[Launch]>
     private let nextLaunchResult: NetworkResult<Launch>

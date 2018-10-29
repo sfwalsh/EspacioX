@@ -30,5 +30,6 @@ final class MockLaunchListRouter: LaunchListRouter {
                       message: String,
                       options: [(String, (() -> Void))]) {
         didCall.presentAlert = true
+        didUpdate.errorAlertMessage = message
     }
 }

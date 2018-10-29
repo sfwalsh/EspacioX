@@ -46,4 +46,16 @@ struct Launch: Decodable {
         launchDateUnixTimeStamp = try values.decodeIfPresent(Double.self, forKey: .launchDateUnixTimeStamp) ?? 0
         rocket = try values.decodeIfPresent(Rocket.self, forKey: .rocket)
     }
+    
+    init(flightNumber: Int,
+         missionName: String?,
+         missionId: [String],
+         launchDateUnixTimeStamp: Double,
+         rocket: Rocket?) {
+        self.flightNumber = flightNumber
+        self.missionName = missionName
+        self.missionId = missionId
+        self.launchDateUnixTimeStamp = launchDateUnixTimeStamp
+        self.rocket = rocket
+    }
 }

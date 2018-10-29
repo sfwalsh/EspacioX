@@ -21,6 +21,8 @@
 		BF54E2B22187930F00FA2851 /* MockLaunchListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54E2B12187930F00FA2851 /* MockLaunchListPresenter.swift */; };
 		BF54E2B42187935300FA2851 /* MockLaunchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54E2B32187935300FA2851 /* MockLaunchListViewController.swift */; };
 		BF54E2B6218793C700FA2851 /* LaunchListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54E2B5218793C700FA2851 /* LaunchListPresenterTests.swift */; };
+		BF54E2BB2187A05D00FA2851 /* MockLaunchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54E2BA2187A05D00FA2851 /* MockLaunchBuilder.swift */; };
+		BF54E2BD2187A76400FA2851 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54E2BC2187A76400FA2851 /* APITests.swift */; };
 		BF8CCF302185EB9500AB87E6 /* FirstStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF2F2185EB9500AB87E6 /* FirstStage.swift */; };
 		BF8CCF322185EBA500AB87E6 /* SecondStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF312185EBA500AB87E6 /* SecondStage.swift */; };
 		BF8CCF342185EBB500AB87E6 /* Fairings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF332185EBB500AB87E6 /* Fairings.swift */; };
@@ -83,6 +85,8 @@
 		BF54E2B12187930F00FA2851 /* MockLaunchListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLaunchListPresenter.swift; sourceTree = "<group>"; };
 		BF54E2B32187935300FA2851 /* MockLaunchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLaunchListViewController.swift; sourceTree = "<group>"; };
 		BF54E2B5218793C700FA2851 /* LaunchListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListPresenterTests.swift; sourceTree = "<group>"; };
+		BF54E2BA2187A05D00FA2851 /* MockLaunchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLaunchBuilder.swift; sourceTree = "<group>"; };
+		BF54E2BC2187A76400FA2851 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		BF8CCF2F2185EB9500AB87E6 /* FirstStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStage.swift; sourceTree = "<group>"; };
 		BF8CCF312185EBA500AB87E6 /* SecondStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStage.swift; sourceTree = "<group>"; };
 		BF8CCF332185EBB500AB87E6 /* Fairings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fairings.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 				BF54E2AF218792D900FA2851 /* MockLaunchListInteractor.swift */,
 				BF54E2B12187930F00FA2851 /* MockLaunchListPresenter.swift */,
 				BF54E2B32187935300FA2851 /* MockLaunchListViewController.swift */,
+				BF54E2BA2187A05D00FA2851 /* MockLaunchBuilder.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				BF54E2B5218793C700FA2851 /* LaunchListPresenterTests.swift */,
+				BF54E2BC2187A76400FA2851 /* APITests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -536,10 +542,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF54E2BD2187A76400FA2851 /* APITests.swift in Sources */,
 				BF54E2B42187935300FA2851 /* MockLaunchListViewController.swift in Sources */,
 				BF54E2B0218792D900FA2851 /* MockLaunchListInteractor.swift in Sources */,
 				BF54E2B22187930F00FA2851 /* MockLaunchListPresenter.swift in Sources */,
 				BF54E2B6218793C700FA2851 /* LaunchListPresenterTests.swift in Sources */,
+				BF54E2BB2187A05D00FA2851 /* MockLaunchBuilder.swift in Sources */,
 				BF54E2AC2187926600FA2851 /* MockLaunchListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
