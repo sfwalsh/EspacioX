@@ -57,16 +57,14 @@ struct LaunchViewModel {
         }
     }
     
-    func createCountdownString(forDateFormatter dateFormatter: DateFormatter) -> String {
+    func createDateCountdownComponentsInterval() -> DateComponents {
+        let calendar = Calendar.current
+        
         let launchDate = Date(timeIntervalSince1970: launch.launchDateUnixTimeStamp)
         let currentDate = Date()
-        let difference = Calendar.current.dateComponents([.day, .minute, .hour, .second], from: currentDate, to: launchDate)
-        
-        guard let compareDate = Calendar.current.date(from: difference) else {
-            return ""
-        }
-        let dateString = dateFormatter.string(from: compareDate)
-        return dateString
+        let components = calendar.dateComponents([.day, .hour, .minute, .second],
+                                                 from: currentDate, to: launchDate)
+        return components
     }
     
     func createMissionTimeString(forDateFormatter formatter: DateFormatter) -> String {

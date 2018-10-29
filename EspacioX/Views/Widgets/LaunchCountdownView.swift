@@ -108,17 +108,33 @@ final class LaunchCountdownView: UIView {
 
 extension LaunchCountdownView {
     
-    private func createDateFormatter(withFormat format: String) -> DateFormatter {
-        let formatter = DateFormatter()
-        formatter.locale = NSLocale.current
-        formatter.dateFormat = format
+    private func createDateComponentsFormatter(withUnits units: NSCalendar.Unit) -> DateComponentsFormatter {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = units
+        formatter.unitsStyle = .abbreviated
+        
         return formatter
+    }
+    
+    private func createSecondsString(forComponents components: DateComponents) -> String {
+        guard let secondsValue = components.second else { return "" }
+        return "\(secondsValue)s"
+    }
+    
+    private func createDaysHoursMinutesString(forComponents components: DateComponents) -> String {
+        let formatter = createDateComponentsFormatter(withUnits: [.day, .hour, .minute])
+        guard let dayHourMinuteString = formatter.string(from: components) else {
+            return ""
+        }
+        
+        return dayHourMinuteString
     }
     
     private func updateCountdownLabel() {
         guard let viewModel = viewModel else { return }
-        let dayHourMinuteString = viewModel.createCountdownString(forDateFormatter: createDateFormatter(withFormat: "d'd' H'h' m'm'"))
-        let secondsString = viewModel.createCountdownString(forDateFormatter: createDateFormatter(withFormat: "s's'"))
+        let components = viewModel.createDateCountdownComponentsInterval()
+        let dayHourMinuteString = createDaysHoursMinutesString(forComponents: components)
+        let secondsString = createSecondsString(forComponents: components)
         let combinedString = dayHourMinuteString + " " + secondsString
         countdownLabel.attributedText = combinedString.biFontString(forPrimaryFont: FontMachine.extraLargeFont,
                                                                     highlightedFont: FontMachine.largeFont,
