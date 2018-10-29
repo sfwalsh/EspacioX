@@ -38,10 +38,10 @@ final class LaunchListDefaultViewController: UIViewController, Navigatable {
         return refreshControl
     }()
     
-    private let activityIndicator: UIActivityIndicatorView = {
-        let activtyIndicator = UIActivityIndicatorView(style: .whiteLarge)
-        activtyIndicator.hidesWhenStopped = true
-        return activtyIndicator
+    private let loaderView: LoaderView = {
+        let loaderView = LoaderView(frame: .zero,
+                                    arcColor: Palette.awfullyOrange)
+        return loaderView
     }()
     
     init(withPresenter presenter: LaunchListPresenter) {
@@ -86,11 +86,11 @@ extension LaunchListDefaultViewController: LaunchListViewController {
     }
     
     func showLoader() {
-        activityIndicator.startAnimating()
+        loaderView.startAnimating()
     }
     
     func hideLoader() {
-        activityIndicator.stopAnimating()
+        loaderView.stopAnimating()
     }
 }
 
@@ -106,7 +106,7 @@ extension LaunchListDefaultViewController {
         view.addSubviewsForAutolayout(views: [
             backgroundGradientView,
             tableView,
-            activityIndicator
+            loaderView
             ])
     }
     
@@ -137,8 +137,10 @@ extension LaunchListDefaultViewController {
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            loaderView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loaderView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            loaderView.widthAnchor.constraint(equalToConstant: 100),
+            loaderView.heightAnchor.constraint(equalToConstant: 100)
             ])
     }
 }

@@ -15,6 +15,7 @@
 		BF3D4791218675A40082EF75 /* LaunchDetailDefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D4790218675A40082EF75 /* LaunchDetailDefaultPresenter.swift */; };
 		BF3D47932186770F0082EF75 /* LaunchDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D47922186770F0082EF75 /* LaunchDetailBuilder.swift */; };
 		BF3D47952186791D0082EF75 /* LaunchCountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D47942186791D0082EF75 /* LaunchCountdownView.swift */; };
+		BF3D47972186865B0082EF75 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D47962186865B0082EF75 /* LoaderView.swift */; };
 		BF8CCF302185EB9500AB87E6 /* FirstStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF2F2185EB9500AB87E6 /* FirstStage.swift */; };
 		BF8CCF322185EBA500AB87E6 /* SecondStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF312185EBA500AB87E6 /* SecondStage.swift */; };
 		BF8CCF342185EBB500AB87E6 /* Fairings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF332185EBB500AB87E6 /* Fairings.swift */; };
@@ -72,6 +73,7 @@
 		BF3D4790218675A40082EF75 /* LaunchDetailDefaultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailDefaultPresenter.swift; sourceTree = "<group>"; };
 		BF3D47922186770F0082EF75 /* LaunchDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailBuilder.swift; sourceTree = "<group>"; };
 		BF3D47942186791D0082EF75 /* LaunchCountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCountdownView.swift; sourceTree = "<group>"; };
+		BF3D47962186865B0082EF75 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		BF8CCF2F2185EB9500AB87E6 /* FirstStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStage.swift; sourceTree = "<group>"; };
 		BF8CCF312185EBA500AB87E6 /* SecondStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStage.swift; sourceTree = "<group>"; };
 		BF8CCF332185EBB500AB87E6 /* Fairings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fairings.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				BF3D477C21866BDB0082EF75 /* GradientView.swift */,
+				BF3D47962186865B0082EF75 /* LoaderView.swift */,
 				BF3D47942186791D0082EF75 /* LaunchCountdownView.swift */,
 			);
 			path = Widgets;
@@ -324,9 +327,9 @@
 			isa = PBXGroup;
 			children = (
 				BFE55FF22184F720001B518B /* LaunchList */,
+				BF3D4788218674EB0082EF75 /* LaunchDetail */,
 				BFE560122184FCA9001B518B /* Protocols */,
 				BF3D477E21866BE40082EF75 /* Widgets */,
-				BF3D4788218674EB0082EF75 /* LaunchDetail */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				BF3D47932186770F0082EF75 /* LaunchDetailBuilder.swift in Sources */,
 				BF8CCF3A2185FCA400AB87E6 /* LaunchViewModel.swift in Sources */,
 				BFE55FFB2184F8B5001B518B /* LaunchListPresenter.swift in Sources */,
+				BF3D47972186865B0082EF75 /* LoaderView.swift in Sources */,
 				BF8CCF322185EBA500AB87E6 /* SecondStage.swift in Sources */,
 				BF3D478F218675680082EF75 /* LaunchDetailPresenter.swift in Sources */,
 				BF8CCF342185EBB500AB87E6 /* Fairings.swift in Sources */,
