@@ -16,6 +16,11 @@
 		BF3D47932186770F0082EF75 /* LaunchDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D47922186770F0082EF75 /* LaunchDetailBuilder.swift */; };
 		BF3D47952186791D0082EF75 /* LaunchCountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D47942186791D0082EF75 /* LaunchCountdownView.swift */; };
 		BF3D47972186865B0082EF75 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D47962186865B0082EF75 /* LoaderView.swift */; };
+		BF54E2AC2187926600FA2851 /* MockLaunchListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54E2AB2187926600FA2851 /* MockLaunchListRouter.swift */; };
+		BF54E2B0218792D900FA2851 /* MockLaunchListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54E2AF218792D900FA2851 /* MockLaunchListInteractor.swift */; };
+		BF54E2B22187930F00FA2851 /* MockLaunchListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54E2B12187930F00FA2851 /* MockLaunchListPresenter.swift */; };
+		BF54E2B42187935300FA2851 /* MockLaunchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54E2B32187935300FA2851 /* MockLaunchListViewController.swift */; };
+		BF54E2B6218793C700FA2851 /* LaunchListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54E2B5218793C700FA2851 /* LaunchListPresenterTests.swift */; };
 		BF8CCF302185EB9500AB87E6 /* FirstStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF2F2185EB9500AB87E6 /* FirstStage.swift */; };
 		BF8CCF322185EBA500AB87E6 /* SecondStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF312185EBA500AB87E6 /* SecondStage.swift */; };
 		BF8CCF342185EBB500AB87E6 /* Fairings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCF332185EBB500AB87E6 /* Fairings.swift */; };
@@ -30,7 +35,6 @@
 		BFE55FCF2184F0A8001B518B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE55FCE2184F0A8001B518B /* AppDelegate.swift */; };
 		BFE55FD62184F0A9001B518B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE55FD52184F0A9001B518B /* Assets.xcassets */; };
 		BFE55FD92184F0A9001B518B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE55FD72184F0A9001B518B /* LaunchScreen.storyboard */; };
-		BFE55FE42184F0A9001B518B /* EspacioXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE55FE32184F0A9001B518B /* EspacioXTests.swift */; };
 		BFE55FEF2184F6E4001B518B /* LaunchListDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE55FEE2184F6E4001B518B /* LaunchListDefaultViewController.swift */; };
 		BFE55FF12184F71B001B518B /* LaunchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE55FF02184F71B001B518B /* LaunchListViewController.swift */; };
 		BFE55FF62184F743001B518B /* SystemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE55FF52184F743001B518B /* SystemExtensions.swift */; };
@@ -74,6 +78,11 @@
 		BF3D47922186770F0082EF75 /* LaunchDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailBuilder.swift; sourceTree = "<group>"; };
 		BF3D47942186791D0082EF75 /* LaunchCountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCountdownView.swift; sourceTree = "<group>"; };
 		BF3D47962186865B0082EF75 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		BF54E2AB2187926600FA2851 /* MockLaunchListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLaunchListRouter.swift; sourceTree = "<group>"; };
+		BF54E2AF218792D900FA2851 /* MockLaunchListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLaunchListInteractor.swift; sourceTree = "<group>"; };
+		BF54E2B12187930F00FA2851 /* MockLaunchListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLaunchListPresenter.swift; sourceTree = "<group>"; };
+		BF54E2B32187935300FA2851 /* MockLaunchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLaunchListViewController.swift; sourceTree = "<group>"; };
+		BF54E2B5218793C700FA2851 /* LaunchListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListPresenterTests.swift; sourceTree = "<group>"; };
 		BF8CCF2F2185EB9500AB87E6 /* FirstStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStage.swift; sourceTree = "<group>"; };
 		BF8CCF312185EBA500AB87E6 /* SecondStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStage.swift; sourceTree = "<group>"; };
 		BF8CCF332185EBB500AB87E6 /* Fairings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fairings.swift; sourceTree = "<group>"; };
@@ -91,7 +100,6 @@
 		BFE55FD82184F0A9001B518B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFE55FDA2184F0A9001B518B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFE55FDF2184F0A9001B518B /* EspacioXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EspacioXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFE55FE32184F0A9001B518B /* EspacioXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspacioXTests.swift; sourceTree = "<group>"; };
 		BFE55FE52184F0A9001B518B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFE55FEE2184F6E4001B518B /* LaunchListDefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListDefaultViewController.swift; sourceTree = "<group>"; };
 		BFE55FF02184F71B001B518B /* LaunchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +186,34 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		BF54E2AD2187926A00FA2851 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BF54E2AB2187926600FA2851 /* MockLaunchListRouter.swift */,
+				BF54E2AF218792D900FA2851 /* MockLaunchListInteractor.swift */,
+				BF54E2B12187930F00FA2851 /* MockLaunchListPresenter.swift */,
+				BF54E2B32187935300FA2851 /* MockLaunchListViewController.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		BF54E2AE2187926F00FA2851 /* LaunchList */ = {
+			isa = PBXGroup;
+			children = (
+				BF54E2AD2187926A00FA2851 /* Mocks */,
+				BF54E2B7218793CB00FA2851 /* Tests */,
+			);
+			path = LaunchList;
+			sourceTree = "<group>";
+		};
+		BF54E2B7218793CB00FA2851 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BF54E2B5218793C700FA2851 /* LaunchListPresenterTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		BF8CCF352185EBC500AB87E6 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,8 +289,8 @@
 		BFE55FE22184F0A9001B518B /* EspacioXTests */ = {
 			isa = PBXGroup;
 			children = (
-				BFE55FE32184F0A9001B518B /* EspacioXTests.swift */,
 				BFE55FE52184F0A9001B518B /* Info.plist */,
+				BF54E2AE2187926F00FA2851 /* LaunchList */,
 			);
 			path = EspacioXTests;
 			sourceTree = "<group>";
@@ -500,7 +536,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFE55FE42184F0A9001B518B /* EspacioXTests.swift in Sources */,
+				BF54E2B42187935300FA2851 /* MockLaunchListViewController.swift in Sources */,
+				BF54E2B0218792D900FA2851 /* MockLaunchListInteractor.swift in Sources */,
+				BF54E2B22187930F00FA2851 /* MockLaunchListPresenter.swift in Sources */,
+				BF54E2B6218793C700FA2851 /* LaunchListPresenterTests.swift in Sources */,
+				BF54E2AC2187926600FA2851 /* MockLaunchListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
